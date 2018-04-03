@@ -31,7 +31,7 @@ public class RecognitionAllIt {
     private String expectedPlate;
 
     @Parameterized.Parameters
-    public static Collection primeNumbers() throws IOException {
+    public static Collection makeParameters() throws IOException {
         //String snapshotDirPath = "src/test/resources/snapshots";
         String resultsPath = "src/test/resources/results.properties";
         InputStream resultsStream = new FileInputStream(new File(resultsPath));

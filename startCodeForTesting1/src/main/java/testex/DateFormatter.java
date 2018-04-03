@@ -7,29 +7,23 @@ import java.util.TimeZone;
 
 public class DateFormatter implements IDateFormatter{
 
-/**
- * Returns a formatted string representing NOW, adjusted to the time zone string
- * passed in
- * @param timeZone. Must be a valid time zone as returned by:TimeZone.getAvailableIDs() 
- * @return Time Zone string formatted like ("dd MMM yyyy hh:mm aa") and adjusted to the provided
- * time zone
- * @throws JokeException If the timeZone string is not a valid string
- */
 
 private String timeZone;
-public DateFormatter(String timeZone) throws JokeException {
-  this.timeZone = timeZone;
-  if(!Arrays.asList(TimeZone.getAvailableIDs()).contains(timeZone)){
-    throw new JokeException("Illegal Time Zone String");
+private Date time;
+  public DateFormatter(String timeZone, Date time) throws JokeException{
+    if (!Arrays.asList(TimeZone.getAvailableIDs()).contains(timeZone) || time == null)
+    {
+      throw new JokeException("Illegal Time Zone or Date");
+    }
+    this.time = time;
+    this.timeZone = timeZone;
   }
-}
 
   public String getFormattedDate(){
-     Date time = new Date();
     String dateTimeFormat = "dd MMM yyyy hh:mm aa";
     SimpleDateFormat simpleFormat = new SimpleDateFormat(dateTimeFormat);
     simpleFormat.setTimeZone(TimeZone.getTimeZone(timeZone));
-    return simpleFormat.format(time); 
+    return simpleFormat.format(time);
   }
 
   /**
@@ -39,18 +33,18 @@ public DateFormatter(String timeZone) throws JokeException {
    */
    /*
   public static void main(String[] args) throws JokeException  {
-    
+
     for (String str : TimeZone.getAvailableIDs()) {
       System.out.println(str);
     }
-    
+
     //Executing our public method with a valid String:
     System.out.println(new DateFormatter().getFormattedDate("Europe/Kiev"));
-    
+
     System.out.println(new DateFormatter().getFormattedDate("ImNotLegal"));
-    
-    
-    
+
+
+
   }
 */
 }

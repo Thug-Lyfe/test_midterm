@@ -1,6 +1,9 @@
 package testex;
 
 
+import testex.IjokeFetcher;
+import testex.Joke;
+
 import static com.jayway.restassured.RestAssured.given;
 
 public class ChuckNorris implements IjokeFetcher {
