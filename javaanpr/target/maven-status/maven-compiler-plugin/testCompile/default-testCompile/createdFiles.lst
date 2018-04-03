@@ -1,0 +1,15 @@
+net\sf\javaanpr\imageanalysis\PhotoTest.class
+net\sf\javaanpr\recognizer\RecognizedCharTest.class
+net\sf\javaanpr\gui\ReportGeneratorTest.class
+net\sf\javaanpr\intelligence\SyntaxAnalysisModeTest.class
+net\sf\javaanpr\test\util\TestUtility.class
+net\sf\javaanpr\imageanalysis\PeakComparatorTest.class
+net\sf\javaanpr\intelligence\RecognizedPlateTest.class
+net\sf\javaanpr\test\RecognitionPerformanceIT.class
+net\sf\javaanpr\test\util\SimpleImageViewer.class
+net\sf\javaanpr\gui\tools\ImageFileFilterTest.class
+net\sf\javaanpr\test\RecognitionIT.class
+net\sf\javaanpr\test\util\TestRunner.class
+net\sf\javaanpr\configurator\ConfiguratorTest.class
+net\sf\javaanpr\test\RecognitionAllIt.class
+net\sf\javaanpr\recognizer\PatternComparatorTest.class
